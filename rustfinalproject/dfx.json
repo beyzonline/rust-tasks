@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "rustfinalproject_backend": {
+      "candid": "src/rustfinalproject_backend/rustfinalproject_backend.did",
+      "package": "rustfinalproject_backend",
+      "type": "rust"
+    },
+    "rustfinalproject_frontend": {
+      "dependencies": [
+        "rustfinalproject_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/rustfinalproject_frontend/src/index.html"
+      },
+      "source": [
+        "src/rustfinalproject_frontend/assets",
+        "dist/rustfinalproject_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
